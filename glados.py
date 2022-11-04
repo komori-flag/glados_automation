@@ -12,10 +12,10 @@ sendContent = ''
 cookies= []
 
 def start():    
-    url= "https://glados.one/api/user/checkin"
-    url2= "https://glados.one/api/user/status"
-    referer = 'https://glados.one/console/checkin'
-    origin = "https://glados.one"
+    url= "https://glados.rocks/api/user/checkin"
+    url2= "https://glados.rocks/api/user/status"
+    referer = 'https://glados.rocks/console/checkin'
+    origin = "https://glados.rocks"
     useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
     payload={
         'token': 'glados.network'
