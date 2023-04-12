@@ -10,6 +10,9 @@ if __name__ == '__main__':
 # glados账号cookie 直接使用数组 如果使用环境变量需要字符串分割一下
     cookies = os.environ.get("COOKIES", []).split("&")
     print(cookies) 
+    if cookies[0] == "":
+        print('未获取到COOKIE变量') 
+        cookies = []
     url= "https://glados.rocks/api/user/checkin"
     url2= "https://glados.rocks/api/user/status"
     referer = 'https://glados.rocks/console/checkin'
