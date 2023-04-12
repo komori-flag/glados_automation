@@ -3,7 +3,7 @@ name: glados
 on:
   workflow_dispatch:
   schedule:
-  - cron: "0 0 10 ? * *" #每天上午十点运行
+  - cron: "0 10 * * *" #每天上午十点运行
 
 jobs:
   build:
