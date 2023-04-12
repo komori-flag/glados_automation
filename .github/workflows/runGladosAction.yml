@@ -1,4 +1,4 @@
-name: glados
+name: 开始每日签到
 
 on:
   workflow_dispatch:

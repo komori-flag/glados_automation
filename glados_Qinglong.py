@@ -1,18 +1,14 @@
 import requests,json,os
-# -------------------------------------------------------------------------------------------
-# github workflows
-# -------------------------------------------------------------------------------------------
-if __name__ == '__main__':
-# pushplus秘钥 申请地址 http://www.pushplus.plus
-    sckey = os.environ.get("PUSHPLUS_TOKEN", "")
-# 推送内容
-    sendContent = ''
-# glados账号cookie 直接使用数组 如果使用环境变量需要字符串分割一下
-    cookies = os.environ.get("COOKIES", []).split("&")
-    if cookies[0] == "":
-        print('未获取到COOKIE变量') 
-        cookies = []
-        exit(0)
+#============运行在青龙中的脚本=========
+# 推送开关
+sever = 'on'
+# pushplus秘钥
+sckey =''
+sendContent = ''
+# glados账号cookie
+cookies= []
+
+def start():    
     url= "https://glados.rocks/api/user/checkin"
     url2= "https://glados.rocks/api/user/status"
     referer = 'https://glados.rocks/console/checkin'
@@ -30,13 +26,15 @@ if __name__ == '__main__':
         email = state.json()['data']['email']
         if 'message' in checkin.text:
             mess = checkin.json()['message']
-            print(email+'----结果--'+mess+'----剩余('+time+')天')  # 日志输出
+            print(email+'----'+mess+'----剩余('+time+')天')  # 日志输出
+            global sendContent
             sendContent += email+'----'+mess+'----剩余('+time+')天\n'
         else:
-            requests.get('http://www.pushplus.plus/send?token=' + sckey + '&content='+email+'cookie已失效')
-            print('cookie已失效')  # 日志输出
+            requests.get('http://www.pushplus.plus/send?token=' + sckey + '&content='+email+'更新cookie')
      #--------------------------------------------------------------------------------------------------------#   
-    if sckey != "":
-         requests.get('http://www.pushplus.plus/send?token=' + sckey + '&title='+email+'签到成功'+'&content='+sendContent)
+    if sever == 'on':
+        requests.get('http://www.pushplus.plus/send?token=' + sckey + '&title=VPN签到成功'+'&content='+sendContent)
 
 
+if __name__ == '__main__':
+    start()
