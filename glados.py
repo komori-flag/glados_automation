@@ -1,19 +1,17 @@
 import requests,json,os
 # -------------------------------------------------------------------------------------------
-# 所有的变量都可以用环境变量代替，我自己是直接写到了脚本里。                                     -
 # -------------------------------------------------------------------------------------------
-# 推送开关 off/on
-sever = 'off'
 # pushplus秘钥 申请地址 http://www.pushplus.plus
-sckey = os.environ.get("PUSHPLUS_TOKEN", "")
-if sckey != ""
-    sever = 'on'
+sckey = os.environ.get("PUSHPLUS_TOKEN", "off")
+print(sckey) 
 # 推送内容
 sendContent = ''
 # glados账号cookie 直接使用数组 如果使用环境变量需要字符串分割一下
 cookies = os.environ.get("COOKIES", []).split("&")
 print(cookies) 
 def start():    
+    if sckey != ""
+        sever = 'on'
     url= "https://glados.rocks/api/user/checkin"
     url2= "https://glados.rocks/api/user/status"
     referer = 'https://glados.rocks/console/checkin'
@@ -37,7 +35,7 @@ def start():
         else:
             requests.get('http://www.pushplus.plus/send?token=' + sckey + '&content='+email+'cookie已失效')
      #--------------------------------------------------------------------------------------------------------#   
-    if sever == 'on':
+    if sckey != 'off':
         requests.get('http://www.pushplus.plus/send?token=' + sckey + '&title='+email+'签到成功'+'&content='+sendContent)
 
 
