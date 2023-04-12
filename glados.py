@@ -33,10 +33,10 @@ def start():
             global sendContent
             sendContent += email+'----'+mess+'----剩余('+time+')天\n'
         else:
-            requests.get('http://www.pushplus.plus/send?token=' + sckey + '&content='+email+'更新cookie')
+            requests.get('http://www.pushplus.plus/send?token=' + sckey + '&content='+email+'cookie已失效')
      #--------------------------------------------------------------------------------------------------------#   
     if sever == 'on':
-        requests.get('http://www.pushplus.plus/send?token=' + sckey + '&title=VPN签到成功'+'&content='+sendContent)
+        requests.get('http://www.pushplus.plus/send?token=' + sckey + '&title='+email+'签到成功'+'&content='+sendContent)
 
 
 def main_handler(event, context):
