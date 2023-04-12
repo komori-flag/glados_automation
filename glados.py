@@ -5,9 +5,9 @@ import requests,json,os
 # 推送开关 off/on
 sever = 'off'
 # pushplus秘钥 申请地址 http://www.pushplus.plus
-sckey = os.environ.get("PUSHPLUS_TOKEN", '')
-if sckey != ''
-   sever = 'on'
+sckey = os.environ.get("PUSHPLUS_TOKEN", "")
+if sckey != ""
+    sever = 'on'
 # 推送内容
 sendContent = ''
 # glados账号cookie 直接使用数组 如果使用环境变量需要字符串分割一下
