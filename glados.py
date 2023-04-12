@@ -10,8 +10,6 @@ sendContent = ''
 cookies = os.environ.get("COOKIES", []).split("&")
 print(cookies) 
 def start():    
-    if sckey != ""
-        sever = 'on'
     url= "https://glados.rocks/api/user/checkin"
     url2= "https://glados.rocks/api/user/status"
     referer = 'https://glados.rocks/console/checkin'
