@@ -1,15 +1,15 @@
 import requests,json,os
 # -------------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------------
+if __name__ == '__main__':
 # pushplus秘钥 申请地址 http://www.pushplus.plus
-sckey = os.environ.get("PUSHPLUS_TOKEN", "off")
-print(sckey) 
+    sckey = os.environ.get("PUSHPLUS_TOKEN", "off")
+    print(sckey) 
 # 推送内容
-sendContent = ''
+    sendContent = ''
 # glados账号cookie 直接使用数组 如果使用环境变量需要字符串分割一下
-cookies = os.environ.get("COOKIES", []).split("&")
-print(cookies) 
-def start():    
+    cookies = os.environ.get("COOKIES", []).split("&")
+    print(cookies) 
     url= "https://glados.rocks/api/user/checkin"
     url2= "https://glados.rocks/api/user/status"
     referer = 'https://glados.rocks/console/checkin'
@@ -28,7 +28,6 @@ def start():
         if 'message' in checkin.text:
             mess = checkin.json()['message']
             print(email+'----结果--'+mess+'----剩余('+time+')天')  # 日志输出
-            global sendContent
             sendContent += email+'----'+mess+'----剩余('+time+')天\n'
         else:
             requests.get('http://www.pushplus.plus/send?token=' + sckey + '&content='+email+'cookie已失效')
@@ -37,5 +36,3 @@ def start():
         requests.get('http://www.pushplus.plus/send?token=' + sckey + '&title='+email+'签到成功'+'&content='+sendContent)
 
 
-if __name__ == '__main__':
-    start()
