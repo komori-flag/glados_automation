@@ -5,12 +5,14 @@ import requests,json,os
 # 推送开关 off/on
 sever = 'off'
 # pushplus秘钥 申请地址 http://www.pushplus.plus
-sckey =''
+sckey = os.environ.get("PUSHPLUS_TOKEN", '')
+if sckey != ''
+   sever = 'on'
 # 推送内容
 sendContent = ''
 # glados账号cookie 直接使用数组 如果使用环境变量需要字符串分割一下
-cookies= []
-
+cookies = os.environ.get("COOKIES", []).split("&")
+print(cookies) 
 def start():    
     url= "https://glados.rocks/api/user/checkin"
     url2= "https://glados.rocks/api/user/status"
@@ -38,9 +40,6 @@ def start():
     if sever == 'on':
         requests.get('http://www.pushplus.plus/send?token=' + sckey + '&title='+email+'签到成功'+'&content='+sendContent)
 
-
-def main_handler(event, context):
-  return start()
 
 if __name__ == '__main__':
     start()
