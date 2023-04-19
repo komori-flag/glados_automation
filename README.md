@@ -28,6 +28,10 @@
  4.点击右上角 **star**
  
  5.你可以点击 Actions 标签查看运行的详细状况
+ 
+ # Tips
+ 
+   当你签到差不多一个月的时候就不能百分百获得一天的使用额度，而是有几率获得一天的额度。如果觉得好用建议购买一个最低级的套餐就可以一直签到一直续杯了。
 
 ![image](https://user-images.githubusercontent.com/70319988/231369203-c812910a-963d-45b8-98a5-95b2623c25d7.png)
 ![image](https://user-images.githubusercontent.com/70319988/199923789-639e8295-b03e-4abd-858e-ff427015512a.png)
