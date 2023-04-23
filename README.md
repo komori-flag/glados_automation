@@ -33,6 +33,7 @@
    直接把 glados_Qinglong.py 文件放到青龙里 变量值自行直接在代码里更改  没有使用环境变量
  # 自动同步上游代码
  https://github.com/settings/tokens
+ 环境变量名称 `PAT`
  
  # Tips
  
