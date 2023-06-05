@@ -4,7 +4,7 @@
 
 注册GLaDOS(注册地址在 https://github.com/glados-network/GLaDOS 实时更新) 
 
-
+或者点击 https://glados.space/landing/ZTI19-S0C9U-95DLB-T31S0 直接注册
 
 输入邀请码:`ZTI19-S0C9U-95DLB-T31S0` 进行激活 你我都可以获得免费天数
 
@@ -31,9 +31,11 @@
  
  # 青龙面板
    直接把 glados_Qinglong.py 文件放到青龙里 变量值自行直接在代码里更改  没有使用环境变量
+   
  # 自动同步上游代码
   环境变量名称 `PAT`
  点击 https://github.com/settings/tokens 按下图操作 申请一个秘钥 放到环境变量里就可以了
+ 
  ![微信截图_20230423132436](https://user-images.githubusercontent.com/70319988/233821350-908a0752-658d-4452-919d-8e7b1acf81f4.png)
 ![微信截图_20230423132355](https://user-images.githubusercontent.com/70319988/233821351-f7644740-325b-41cb-8d86-0b9692d9eedb.png)
  
