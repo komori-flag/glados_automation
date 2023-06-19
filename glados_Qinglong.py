@@ -1,7 +1,5 @@
 import requests,json,os
 
-# 推送开关
-sever = 'on'
 # pushplus秘钥
 sckey = os.environ.get("PUSHPLUS_TOKEN", "")
 sendContent = ''
@@ -37,7 +35,7 @@ def start():
         else:
             requests.get('http://www.pushplus.plus/send?token=' + sckey + '&content='+email+'更新cookie')
      #--------------------------------------------------------------------------------------------------------#   
-    if sever == 'on':
+    if sckey != ""
         requests.get('http://www.pushplus.plus/send?token=' + sckey + '&title=VPN签到成功'+'&content='+sendContent)
 
 
