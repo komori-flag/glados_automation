@@ -35,7 +35,7 @@ def start():
         else:
             requests.get('http://www.pushplus.plus/send?token=' + sckey + '&content='+email+'更新cookie')
      #--------------------------------------------------------------------------------------------------------#   
-    if sckey != ""
+    if sckey != "":
         requests.get('http://www.pushplus.plus/send?token=' + sckey + '&title=VPN签到成功'+'&content='+sendContent)
 
 
