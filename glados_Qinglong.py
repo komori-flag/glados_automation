@@ -1,12 +1,17 @@
 import requests,json,os
-#============运行在青龙中的脚本=========
+
 # 推送开关
 sever = 'on'
 # pushplus秘钥
-sckey =''
+sckey = os.environ.get("PUSHPLUS_TOKEN", "")
 sendContent = ''
 # glados账号cookie
-cookies= []
+cookies= os.environ.get("GLADOS_COOKIES", []).split("&")
+if cookies[0] == "":
+    print('未获取到COOKIE变量') 
+    cookies = []
+    exit(0)
+
 
 def start():    
     url= "https://glados.rocks/api/user/checkin"
@@ -35,6 +40,9 @@ def start():
     if sever == 'on':
         requests.get('http://www.pushplus.plus/send?token=' + sckey + '&title=VPN签到成功'+'&content='+sendContent)
 
+
+def main_handler(event, context):
+  return start()
 
 if __name__ == '__main__':
     start()
