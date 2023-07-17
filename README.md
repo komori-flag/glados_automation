@@ -1,12 +1,10 @@
 # glados自动签到，实现无限白嫖。
 
-
-
 注册GLaDOS
 
-[注册](https://glados.space/landing/ZTI19-S0C9U-95DLB-T31S0)[注册2](https://zti19-s0c9u-95dlb-t31s0.glados.space) |
+[注册](https://glados.space/landing/ZTI19-S0C9U-95DLB-T31S0) | [注册2](https://zti19-s0c9u-95dlb-t31s0.glados.space) 、
 输入邀请码:`ZTI19-S0C9U-95DLB-T31S0` 进行激活 你我都可以获得免费天数
-=============================================================
+
 
 环境变量：`GLADOS_COOKIE`（必要） 和 `PUSHPLUS_TOKEN`（非必要）
 
