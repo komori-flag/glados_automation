@@ -10,7 +10,7 @@
 
 
 
-环境变量：`GLADOS_COOKIE` 和 `PUSHPLUS_TOKEN`
+环境变量：`GLADOS_COOKIE`（必要） 和 `PUSHPLUS_TOKEN`（非必要）
 
  `GLADOS_COOKIE`多个账号需使用 '&' 隔开
   示例：cookie&cookie&cookie
@@ -32,7 +32,7 @@
  # 青龙面板
    直接把 glados_Qinglong.py 文件放到青龙里 环境变量同上。
    
- # 自动同步上游代码
+ # 自动同步上游代码（非必要）
   环境变量名称 `PAT`
  点击 https://github.com/settings/tokens 按下图操作 申请一个秘钥 放到环境变量里就可以了
  
