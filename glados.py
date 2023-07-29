@@ -19,7 +19,7 @@ if __name__ == '__main__':
     origin = "https://glados.rocks"
     useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
     payload={
-        'token': 'glados.network'
+        'token': 'glados.one'
     }
     for cookie in cookies:
         checkin = requests.post(url,headers={'cookie': cookie ,'referer': referer,'origin':origin,'user-agent':useragent,'content-type':'application/json;charset=UTF-8'},data=json.dumps(payload))
