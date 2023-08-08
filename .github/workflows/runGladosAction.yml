@@ -3,8 +3,9 @@ name: 开始每日签到
 on:
   workflow_dispatch:
   schedule:
-    # UTC 1点30分(北京时间 9点30分)
-    - cron: 30 1 * * *
+    # UTC 4点00分(北京时间 12点00分)
+    # 4/8 从 UTC 4点00分(北京时间 12点00分) 开始每隔 8 小时签到一次，防止网络问题导致的签到不上
+    - cron: 0 4/10 * * *
   # 标星时触发工作流程
   watch:
     types: [started]
